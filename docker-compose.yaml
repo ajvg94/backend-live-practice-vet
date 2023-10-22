@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  postgres:
+    container_name: postgres-database
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    expose:
+      - '5432'
